@@ -223,7 +223,7 @@ var Quiz = function() {
       option5: { type: "introversion",      point: 2 }
     },
      {
-      question: "You find it difficult to speak loudly.",
+      question: "큰소리로 말하는 것이 어렵다고 생각합니다.",
       option1: { type: "introversion",       point: 2 },
       option2: { type: "introversion",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -231,7 +231,7 @@ var Quiz = function() {
       option5: { type: "extraversion",      point: 2 }
     },
      {
-      question: "You get bored if you have to read theoretical books.",
+      question: "나는 이론적인 책을 읽는 것이 지루합니다.",
       option1: { type: "intuition",       point: 2 },
       option2: { type: "intuition",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -239,7 +239,7 @@ var Quiz = function() {
       option5: { type: "sensing",      point: 2 }
     },
      {
-      question: "You tend to sympathize with other people.",
+      question: "나는 다른 사람을 동정하는 경향이 있습니다.",
       option1: { type: "feeling",       point: 2 },
       option2: { type: "feeling",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -247,7 +247,7 @@ var Quiz = function() {
       option5: { type: "thinking",      point: 2 }
     },
      {
-      question: "You value justice higher than mercy.",
+      question: "나는 자비보다 정의를 더 중시합니다",
       option1: { type: "thinking",       point: 2 },
       option2: { type: "thinking",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -255,7 +255,7 @@ var Quiz = function() {
       option5: { type: "feeling",      point: 2 }
     },
      {
-      question: "You rapidly get involved in the social life of a new workplace.",
+      question: "나는 새로운 직장의 생활에 빠르게 적응합니다.",
       option1: { type: "extraversion",       point: 2 },
       option2: { type: "extraversion",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -263,7 +263,7 @@ var Quiz = function() {
       option5: { type: "introversion",      point: 2 }
     },
      {
-      question: "The more people you speak to, the better you feel.",
+      question: "말을 많이 하면 할수록 기분이 좋아집니다.",
       option1: { type: "extraversion",       point: 2 },
       option2: { type: "extraversion",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -271,7 +271,7 @@ var Quiz = function() {
       option5: { type: "introversion",      point: 2 }
     },
      {
-      question: "You tend to rely on your experience rather than on theoretical alternatives.",
+      question: "나는 이론적인 대안보다는 경험에 의존하는 경향이 있습니다.",
       option1: { type: "feeling",       point: 2 },
       option2: { type: "feeling",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -279,7 +279,7 @@ var Quiz = function() {
       option5: { type: "thinking",      point: 2 }
     },
      {
-      question: "As a rule, you proceed only when you have a clear and detailed plan.",
+      question: "원칙적으로는 명확하고 세부적인 계획이 있을 때만 진행합니다.",
       option1: { type: "judging",       point: 2 },
       option2: { type: "judging",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -287,7 +287,7 @@ var Quiz = function() {
       option5: { type: "perceiving",      point: 2 }
     },
      {
-      question: "You easily empathize with the concerns of other people.",
+      question: "다른 사람들의 관심사에 쉽게 공감합니다.",
       option1: { type: "feeling",       point: 2 },
       option2: { type: "feeling",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -295,7 +295,7 @@ var Quiz = function() {
       option5: { type: "thinking",      point: 2 }
     },
      {
-      question: "Often you prefer to read a book than go to a party.",
+      question: "파티에 가는 것보다 책을 읽는 것을 더 좋아합니다.",
       option1: { type: "introversion",       point: 2 },
       option2: { type: "introversion",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -303,7 +303,7 @@ var Quiz = function() {
       option5: { type: "extraversion",      point: 2 }
     },
      {
-      question: "In a group, you enjoy being directly involved and at the centre of attention.",
+      question: "특정 그룹에서, 직접적으로 관여하고 관심의 중심에 있는 것을 즐깁니다.",
       option1: { type: "extraversion",       point: 2 },
       option2: { type: "extraversion",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -311,7 +311,7 @@ var Quiz = function() {
       option5: { type: "introversion",      point: 2 }
     },
      {
-      question: "You are more inclined to experiment than to follow familiar approaches.",
+      question: "익숙한 접근법을 따르는 것보다 실험하는 경향이 있습니다.",
       option1: { type: "perceiving",       point: 2 },
       option2: { type: "perceiving",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -319,7 +319,7 @@ var Quiz = function() {
       option5: { type: "judging",      point: 2 }
     },
      {
-      question: "You are strongly touched by the stories about people's troubles.",
+      question: "사람들의 고민에 대한 이야기에 큰 감동을 받습니다.",
       option1: { type: "feeling",       point: 2 },
       option2: { type: "feeling",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -327,7 +327,7 @@ var Quiz = function() {
       option5: { type: "thinking",      point: 2 }
     },
      {
-      question: "Deadlines seem to you to be of relative rather than absolute importance.",
+      question: "마감일은 절대적으로 중요하기 보다는 상대적인 것으로 느껴집니다.",
       option1: { type: "perceiving",       point: 2 },
       option2: { type: "perceiving",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -335,7 +335,7 @@ var Quiz = function() {
       option5: { type: "judging",      point: 2 }
     },
      {
-      question: "You prefer to isolate yourself from outside noises.",
+      question: "외부 언급으로부터 자신을 격리시키는 것을 선호합니다.",
       option1: { type: "introversion",       point: 2 },
       option2: { type: "introversion",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -351,7 +351,7 @@ var Quiz = function() {
       option5: { type: "sensing",      point: 2 }
     },
      {
-      question: "You think that almost everything can be analyzed.",
+      question: "내 손으로 직접하는 것을 선호합니다.",
       option1: { type: "sensing",       point: 2 },
       option2: { type: "sensing",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -359,7 +359,7 @@ var Quiz = function() {
       option5: { type: "intuition",      point: 2 }
     },
      {
-      question: " For you, no surprises is better than surprises - bad or good ones.",
+      question: "놀라움보다는 평온한 것을 추구합니다.",
       option1: { type: "thinking",       point: 2 },
       option2: { type: "thinking",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -367,7 +367,7 @@ var Quiz = function() {
       option5: { type: "feeling",      point: 2 }
     },
      {
-      question: "You take pleasure in putting things in order.",
+      question: "나는 일을 정리하는 것을 즐깁니다.",
       option1: { type: "judging",       point: 2 },
       option2: { type: "judging",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -375,7 +375,7 @@ var Quiz = function() {
       option5: { type: "perceiving",      point: 2 }
     },
      {
-      question: "You feel at ease in a crowd.",
+      question: "군중 속에서 편안함을 느낍니다.",
       option1: { type: "extraversion",       point: 2 },
       option2: { type: "extraversion",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -383,7 +383,7 @@ var Quiz = function() {
       option5: { type: "introversion",      point: 2 }
     },
      {
-      question: "You have good control over your desires and temptations.",
+      question: "욕구와 유혹을 잘 통제합니다.",
       option1: { type: "thinking",       point: 2 },
       option2: { type: "thinking",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -391,7 +391,7 @@ var Quiz = function() {
       option5: { type: "feeling",      point: 2 }
     },
      {
-      question: "You easily understand new theoretical principles.",
+      question: "새로운 이론 원리를 쉽게 이해합니다.",
       option1: { type: "sensing",       point: 2 },
       option2: { type: "sensing",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -399,7 +399,7 @@ var Quiz = function() {
       option5: { type: "intuition",      point: 2 }
     },
      {
-      question: "You usually place yourself nearer to the side than in the center of the room.",
+      question: " 보통 방의 중앙보다 옆쪽에 더 가까이 앉습니다.",
       option1: { type: "introversion",       point: 2 },
       option2: { type: "introversion",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -407,7 +407,7 @@ var Quiz = function() {
       option5: { type: "extraversion",      point: 2 }
     },
      {
-      question: "You willingly involve yourself in matters which engage your sympathies.",
+      question: "연민을 느끼는 것에 기꺼이 관여합니다.",
       option1: { type: "feeling",       point: 2 },
       option2: { type: "feeling",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -415,7 +415,7 @@ var Quiz = function() {
       option5: { type: "thinking",      point: 2 }
     },
      {
-      question: "A thirst for adventure is something close to your heart.",
+      question: "도전에 대한 갈망이 있습니다.",
       option1: { type: "intuition",       point: 2 },
       option2: { type: "intuition",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -423,7 +423,7 @@ var Quiz = function() {
       option5: { type: "sensing",      point: 2 }
     },
      {
-      question: "You easily perceive various ways in which events could develop.",
+      question: "사건들이 어떻게 전개될 수 있는지를 쉽게 인지합니다.",
       option1: { type: "intuition",       point: 2 },
       option2: { type: "intuition",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -431,7 +431,7 @@ var Quiz = function() {
       option5: { type: "sensing",      point: 2 }
     },
      {
-      question: "When solving a problem you consider the rational approach to be the best.",
+      question: "문제를 해결할 때 합리적인 접근법을 최고로 여깁니다.",
       option1: { type: "thinking",       point: 2 },
       option2: { type: "thinking",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -439,7 +439,7 @@ var Quiz = function() {
       option5: { type: "feeling",      point: 2 }
     },
      {
-      question: "You find it difficult to talk about your feelings.",
+      question: "감정에 대해 말하는 것이 어렵다고 생각합니다.",
       option1: { type: "introversion",       point: 2 },
       option2: { type: "introversion",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -447,7 +447,7 @@ var Quiz = function() {
       option5: { type: "extraversion",      point: 2 }
     },
      {
-      question: "Your decisions are based on the feeling of a moment than thorough planning.",
+      question: "내 결정은 결정은 철저한 계획보다 순간의 느낌에 기초합니다.",
       option1: { type: "feeling",       point: 2 },
       option2: { type: "feeling",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -455,7 +455,7 @@ var Quiz = function() {
       option5: { type: "thinking",      point: 2 }
     },
      {
-      question: "It is easy for you to communicate in social situations.",
+      question: "사회적인 상황에서 소통하는 것이 쉽습니다.",
       option1: { type: "extraversion",       point: 2 },
       option2: { type: "extraversion",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -463,7 +463,7 @@ var Quiz = function() {
       option5: { type: "introversion",      point: 2 }
     },
      {
-      question: "You feel more comfortable sticking to conventional ways.",
+      question: "전통적인 방식을 고수하는 것이 더 편안함을 느낍니다.",
       option1: { type: "judging",       point: 2 },
       option2: { type: "judging",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -471,7 +471,7 @@ var Quiz = function() {
       option5: { type: "perceiving",      point: 2 }
     },
      {
-      question: "You are easily affected by strong emotions.",
+      question: "강한 감정적인 상황에 쉽게 영향을 받습니다.",
       option1: { type: "feeling",       point: 2 },
       option2: { type: "feeling",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -479,7 +479,7 @@ var Quiz = function() {
       option5: { type: "thinking",      point: 2 }
     },
      {
-      question: "You are always looking for opportunities.",
+      question: "나는 항상 기회를 찾고 있습니다.",
       option1: { type: "intuition",       point: 2 },
       option2: { type: "intuition",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -487,7 +487,7 @@ var Quiz = function() {
       option5: { type: "sensing",      point: 2 }
     },
      {
-      question: "You rarely deviate from your habits.",
+      question: "습관이 좀처럼 고쳐지지 않습니다.",
       option1: { type: "judging",       point: 2 },
       option2: { type: "judging",       point: 1 },
       option3: { type: "none",          point: 0 },
@@ -495,7 +495,7 @@ var Quiz = function() {
       option5: { type: "perceiving",      point: 2 }
     },
       {
-      question: "dummy",
+      question: "행복을 추구합니다.",
       option1: { type: "thinking",       point: 0 },
       option2: { type: "thinking",       point: 0 },
       option3: { type: "none",          point: 0 },
