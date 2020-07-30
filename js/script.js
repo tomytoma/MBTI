@@ -1,23 +1,25 @@
 //jquery 객체로 테스트 >> 2020.07.17
+//jquery 객체를 Vanilla JS로 변경 진행 중 >> 2020.07.27-29
 $( function() {
 
   var quiz = new Quiz();
 
   var updateProgress = function() {
+    // 변경 전 jquery 소스 예시 : $( '.progress-bar' ).attr( "style", "width:" + quiz.questionPercentage() + "%" );
     document.querySelector( '.progress-bar' ).setAttribute( "style", "width:" + quiz.questionPercentage() + "%" );
   };
 
 
-// 다음 질문
+// 다음 질문으로 넘어갈 경우 Progress bar가 1칸씩 올라가도록 구성
   var nextQuestion = function() {
 
     var nextQ = quiz.nextQuestion();
 
-    // document.getElementById('questions-full').innerhtml("<p>" + nextQ.question + "</p>");
+    // doument.getElementById 또는 ByClassName으로만 변경할 수 있으나 한계가 있음.
+    // document.getElementById('questions-full').innerHTML("<p>" + nextQ.question + "</p>");
     $( '#questions-full' ).html( nextQ.question );
-
-    $( '.questionOutOf' ).html( '질문 ' + quiz.currentQuestion + '/60' );
     // document.getElementsByClassName('questionOutOf').innerHTML = document.inner('<p>' + '질문 ' + quiz.currentQuestion + '/60' + '</p>');
+    $( '.questionOutOf' ).html( '질문 ' + quiz.currentQuestion + '/60' );
 
     updateProgress();
   };
@@ -28,19 +30,26 @@ $( function() {
     location.reload();
   }
 
-// 답변
+// 답변 이후 진행방식
+// MBTI 질문에 대한 답변이 될 경우 console log에 선택한 MBTI Type과 배점(point)가 표현됨
+// 이후 60개를 모두 완료했을 경우 resultPage();로 이동
   var answer = function( event ) {
     var chosenOption = $( event.target ).attr( "option-name" );
     var questionHash = quiz.questions[ quiz.currentQuestion - 1 ];
     var questionType = questionHash[ chosenOption ][ "type" ];
     var questionPoint = questionHash[ chosenOption ][ "point" ];
     quiz.totalScore[ questionType ] += questionPoint;
-    console.log( "포인트 " + questionType + " 은 " + quiz.totalScore[ questionType ] );
+    console.log( "Point " + questionType + "은 " + quiz.totalScore[ questionType ] );
     nextQuestion();
     resultPage();
   };
 
-  // 변수 등록 - 성향등록
+  // resultPage에 대한 정의
+  // 60개의 항목을 모두 완료했을 경우, 
+  // 기존 quiz 항목이 나왔던 ID는 hide(감추고)
+  // ID값 result 부문 👉🏻 Index.html에 적용된 결과페이지 부문을 show(노출)하도록 구성
+  // h1에는 각각 선택했던 type에 관한 결과값이 노출되도록 함
+  // quiz.totalScore에 해당되는 내용과 일치하면 성향 표시 > console log에도 표현토록 함
   var resultPage = function() {
     if ( quiz.currentQuestion === 61 ) {
       $( '#quiz-1' ).hide();
@@ -57,6 +66,8 @@ $( function() {
       var judging = quiz.totalScore[ 'judging' ];
 
     // 공식 >> 2020.07.22 알고리즘 검토해볼 것 //MBTI를 산출하는 공식*
+    // MBTI 관련 내용들을 섞어서 정리
+    // 앞서 언급된 h1에 백분율(%)로 표현하기 위한 공식이기도 함
       if ( introversion > extraversion ) {
         var percent = Math.floor( ( introversion / ( introversion + extraversion ) * 100 ) )
         lettersResult.push( "I" );
@@ -107,6 +118,7 @@ $( function() {
 
 // 60문항 풀이 후 최종 집계되는 결과
 // 콘솔테스트 하면서체크해볼 것
+// 
       console.log( quiz.totalScore )
       var h1Input = ""
       h1Input += "<h1>" + "재능교육 MBTI 결과 " + "<br>" + h1[ 0 ] + h1[ 1 ] + h1[ 2 ] + h1[ 3 ] + "</h1><br>"
@@ -114,9 +126,6 @@ $( function() {
 
       var typeResult = ""
       typeResult += lettersResult[ 0 ] + lettersResult[ 1 ] + lettersResult[ 2 ] + lettersResult[ 3 ]
-        // 테스트 검토 >> 2020.07.21
-        // console.log(html)
-      // $( "h1" ).append( html )
       personalityMatch(typeResult);
     };
   }
@@ -129,14 +138,13 @@ $( function() {
     console.log(typeResult);
   }
 
-// 최종완료하면 음악과 함께 노출
-  var audio = new Audio( );
 // 리셋 버튼
   document.getElementById( 'btn-reset' ).click( reset );
   // $( '#btn-reset' ).click( reset );
-// 답변 버튼
-  $( '.btn-quiz' ).click( answer );
-  //[].forEach.call(document.getElementsByClassName( 'btn-quiz' ), function(el) {el.addEventListener('click( answer)');
-  nextQuestion();
 
+// 답변 버튼
+  // jquery 대체 진행 중 👉🏻[].forEach.call(document.getElementsByClassName( 'btn-quiz' ), function(el) {el.addEventListener('click( answer)');
+  $( '.btn-quiz' ).click( answer );
+
+  nextQuestion();
 } );
