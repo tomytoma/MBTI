@@ -1,6 +1,3 @@
-// var에 대한 부문을 let 또는 const로 변경할 것 = 변수면 let, 변하지 않는 값이면 const 사용
-// function에 대한 부문 정의를 다시
-// 1) 객체로 선언 / 2) 객체 생성 함수로 객체를 생성 
 var Quiz = function() {
   this.currentQuestion = 0;
 
@@ -508,8 +505,6 @@ var Quiz = function() {
     ];
 };
 
-// Quiz객체에 넣어질 경우,
-// Quiz.prototype은 this로 변경
 Quiz.prototype.questionPercentage = function(){
   return (this.currentQuestion - 1) / 59 * 100;
 };
@@ -521,5 +516,3 @@ Quiz.prototype.nextQuestion = function(){
 Quiz.prototype.answer = function(){
 
 };
-// 마지막에 추가해주는 부문 - 핵심
-// return this;

@@ -1,31 +1,34 @@
+//script의 변수 var를 let 또는 const로 변경할 것
+//변수명을 unique하게 작성토록 할 것
 //jquery 객체로 테스트 >> 2020.07.17
 //jquery 객체를 Vanilla JS로 변경 진행 중 >> 2020.07.27-29
-$( function() {
 
-  var quiz = new Quiz();
+$(function () {
 
-  var updateProgress = function() {
-    // 변경 전 jquery 소스 예시 : $( '.progress-bar' ).attr( "style", "width:" + quiz.questionPercentage() + "%" );
-    document.querySelector( '.progress-bar' ).setAttribute( "style", "width:" + quiz.questionPercentage() + "%" );
-  };
+      var quiz = new Quiz();
+
+      var updateProgress = function () {
+        // 변경 전 jquery 소스 예시 : $( '.progress-bar' ).attr( "style", "width:" + quiz.questionPercentage() + "%" );
+        document.querySelector('.progress-bar').setAttribute("style", "width:" + quiz.questionPercentage() + "%");
+      };
 
 
 // 다음 질문으로 넘어갈 경우 Progress bar가 1칸씩 올라가도록 구성
-  var nextQuestion = function() {
+  var nextQuestion = function () {
 
     var nextQ = quiz.nextQuestion();
 
     // doument.getElementById 또는 ByClassName으로만 변경할 수 있으나 한계가 있음.
     // document.getElementById('questions-full').innerHTML("<p>" + nextQ.question + "</p>");
-    $( '#questions-full' ).html( nextQ.question );
+    $('#questions-full').html(nextQ.question);
     // document.getElementsByClassName('questionOutOf').innerHTML = document.inner('<p>' + '질문 ' + quiz.currentQuestion + '/60' + '</p>');
-    $( '.questionOutOf' ).html( '질문 ' + quiz.currentQuestion + '/60' );
+    $('.questionOutOf').html('질문 ' + quiz.currentQuestion + '/60');
 
     updateProgress();
   };
 
 // 리셋
-  var reset = function() {
+  var reset = function () {
     location.reload();
   }
 

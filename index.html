@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 
+<!-- 2020.07.23 검토 사항 반영 -->
+<!-- 우선 jquery를 활용해서 반영한 뒤, 다시 역으로 Vanilla JS를 구성하려 함 2020.07.28 -->
+<!-- 처음부터 다시 하기에는 Vanilla JS에 대한 학습이 부족한 환경 -->
 <html>
 
     <head>
@@ -8,11 +11,11 @@
         <!-- css -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <!--기본 script-->
+        <!--기본 script--> <!--jquery를 vanilla JS로 변경하는 방안 진행 중 2020.07.29-->
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <!--질문과 답변 json 및 javascript-->
-        <script src="js/questions.js"></script>
+        <script src="js/question-array.js"></script>
         <script src="js/script.js"></script>
         <title> JEI MBTI </title>
     </head>
@@ -28,7 +31,7 @@
                   데이터 영역
                 </div>
 
-                <!--답변 버튼 영역-->
+                <!--답변 버튼 영역--><!-- js로 뺄 것 -->
                 <div class="btn btn-quiz btn-choose center-block btn-primary button-width" id="very-true" option-name="option1">
                     그렇습니다
                 </div>
@@ -68,7 +71,7 @@
         </div>
         
 
-        <!-- script.js에서 연산수행을 통해 도출되는 결과 페이지 -->
+        <!-- script.js에서 연산수행을 통해 도출되는 결과 페이지 --><!-- js로 뺄 것 -->
         <div id="result" class="hidden">
             <div class="well nope center-block col-md-6" style="float: none">
 
@@ -236,7 +239,6 @@
 
             </div>
         </div>
-
 
     </body>
 </html>
