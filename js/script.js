@@ -24,7 +24,6 @@ $( function() {
     updateProgress();
   };
 
-
 // 리셋
   var reset = function() {
     location.reload();
