@@ -5,18 +5,18 @@
 
 $(function () {
 
-      var quiz = new Quiz();
+      const quiz = new Quiz();
 
-      var updateProgress = function () {
+      const updateProgress = function () {
         // 변경 전 jquery 소스 예시 : $( '.progress-bar' ).attr( "style", "width:" + quiz.questionPercentage() + "%" );
         document.querySelector('.progress-bar').setAttribute("style", "width:" + quiz.questionPercentage() + "%");
       };
 
 
 // 다음 질문으로 넘어갈 경우 Progress bar가 1칸씩 올라가도록 구성
-  var nextQuestion = function () {
+  const nextQuestion = function () {
 
-    var nextQ = quiz.nextQuestion();
+    const nextQ = quiz.nextQuestion();
 
     // doument.getElementById 또는 ByClassName으로만 변경할 수 있으나 한계가 있음.
     // document.getElementById('questions-full').innerHTML("<p>" + nextQ.question + "</p>");
@@ -28,18 +28,18 @@ $(function () {
   };
 
 // 리셋
-  var reset = function () {
+  const reset = function () {
     location.reload();
   }
 
 // 답변 이후 진행방식
 // MBTI 질문에 대한 답변이 될 경우 console log에 선택한 MBTI Type과 배점(point)가 표현됨
 // 이후 60개를 모두 완료했을 경우 resultPage();로 이동
-  var answer = function( event ) {
-    var chosenOption = $( event.target ).attr( "option-name" );
-    var questionHash = quiz.questions[ quiz.currentQuestion - 1 ];
-    var questionType = questionHash[ chosenOption ][ "type" ];
-    var questionPoint = questionHash[ chosenOption ][ "point" ];
+  const answer = function( event ) {
+    const chosenOption = $( event.target ).attr( "option-name" );
+    const questionHash = quiz.questions[ quiz.currentQuestion - 1 ];
+    const questionType = questionHash[ chosenOption ][ "type" ];
+    const questionPoint = questionHash[ chosenOption ][ "point" ];
     quiz.totalScore[ questionType ] += questionPoint;
     console.log( "Point " + questionType + "은 " + quiz.totalScore[ questionType ] );
     nextQuestion();
@@ -52,30 +52,30 @@ $(function () {
   // ID값 result 부문 👉🏻 Index.html에 적용된 결과페이지 부문을 show(노출)하도록 구성
   // h1에는 각각 선택했던 type에 관한 결과값이 노출되도록 함
   // quiz.totalScore에 해당되는 내용과 일치하면 성향 표시 > console log에도 표현토록 함
-  var resultPage = function() {
+  const resultPage = function() {
     if ( quiz.currentQuestion === 61 ) {
       $( '#quiz-1' ).hide();
       $( '#result' ).show();
-      var lettersResult = [];
-      var h1 = [];
-      var extraversion = quiz.totalScore[ "extraversion" ];
-      var introversion = quiz.totalScore[ "introversion" ];
-      var sensing = quiz.totalScore[ "sensing" ];
-      var intuition = quiz.totalScore[ 'intuition' ];
-      var thinking = quiz.totalScore[ 'thinking' ];
-      var feeling = quiz.totalScore[ 'feeling' ];
-      var perceiving = quiz.totalScore[ 'perceiving' ]
-      var judging = quiz.totalScore[ 'judging' ];
+      const lettersResult = [];
+      let h1 = [];
+      const extraversion = quiz.totalScore[ "extraversion" ];
+      const introversion = quiz.totalScore[ "introversion" ];
+      const sensing = quiz.totalScore[ "sensing" ];
+      const intuition = quiz.totalScore[ 'intuition' ];
+      const thinking = quiz.totalScore[ 'thinking' ];
+      const feeling = quiz.totalScore[ 'feeling' ];
+      const perceiving = quiz.totalScore[ 'perceiving' ]
+      const judging = quiz.totalScore[ 'judging' ];
 
     // 공식 >> 2020.07.22 알고리즘 검토해볼 것 //MBTI를 산출하는 공식*
     // MBTI 관련 내용들을 섞어서 정리
     // 앞서 언급된 h1에 백분율(%)로 표현하기 위한 공식이기도 함
       if ( introversion > extraversion ) {
-        var percent = Math.floor( ( introversion / ( introversion + extraversion ) * 100 ) )
+        let percent = Math.floor( ( introversion / ( introversion + extraversion ) * 100 ) )
         lettersResult.push( "I" );
         h1.push( "I:" + percent + "% " )
       } else if ( extraversion > introversion ) {
-        var percent = Math.floor( ( extraversion / ( extraversion + introversion ) * 100 ) )
+        let percent = Math.floor( ( extraversion / ( extraversion + introversion ) * 100 ) )
         lettersResult.push( "E" );
         h1.push( "E:" + percent + "% " )
       } else {
@@ -83,11 +83,11 @@ $(function () {
       };
 
       if ( sensing > intuition ) {
-        var percent = Math.floor( ( sensing / ( sensing + intuition ) * 100 ) )
+        let percent = Math.floor( ( sensing / ( sensing + intuition ) * 100 ) )
         lettersResult.push( "S" )
         h1.push( "S:" + percent + "% " )
       } else if ( intuition > sensing ) {
-        var percent = Math.floor( ( intuition / ( intuition + sensing ) * 100 ) )
+        let percent = Math.floor( ( intuition / ( intuition + sensing ) * 100 ) )
         lettersResult.push( "N" )
         h1.push( "N:" + percent + "% " )
       } else {
@@ -95,11 +95,11 @@ $(function () {
       };
 
       if ( thinking > feeling ) {
-        var percent = Math.floor( ( thinking / ( thinking + feeling ) * 100 ) )
+        let percent = Math.floor( ( thinking / ( thinking + feeling ) * 100 ) )
         lettersResult.push( "T" )
         h1.push( "T:" + percent + "% " )
       } else if ( feeling > thinking ) {
-        var percent = Math.floor( ( feeling / ( feeling + thinking ) * 100 ) )
+        let percent = Math.floor( ( feeling / ( feeling + thinking ) * 100 ) )
         lettersResult.push( "F" )
         h1.push( "F:" + percent + "% " )
       } else {
@@ -107,11 +107,11 @@ $(function () {
       };
 
       if ( perceiving > judging ) {
-        var percent = Math.floor( ( perceiving / ( perceiving + judging ) * 100 ) )
+        let percent = Math.floor( ( perceiving / ( perceiving + judging ) * 100 ) )
         lettersResult.push( "P" )
         h1.push( "P:" + percent + "% " )
       } else if ( judging > perceiving ) {
-        var percent = Math.floor( ( judging / ( judging + perceiving ) * 100 ) )
+        let percent = Math.floor( ( judging / ( judging + perceiving ) * 100 ) )
         lettersResult.push( "J" )
         h1.push( "J:" + percent + "% " )
       } else {
@@ -122,18 +122,18 @@ $(function () {
 // 콘솔테스트 하면서체크해볼 것
 // 
       console.log( quiz.totalScore )
-      var h1Input = ""
+      const h1Input = ""
       h1Input += "<h1>" + "재능교육 MBTI 결과 " + "<br>" + h1[ 0 ] + h1[ 1 ] + h1[ 2 ] + h1[ 3 ] + "</h1><br>"
       $( "h1" ).empty().append( h1Input )
 
-      var typeResult = ""
+      const typeResult = ""
       typeResult += lettersResult[ 0 ] + lettersResult[ 1 ] + lettersResult[ 2 ] + lettersResult[ 3 ]
       personalityMatch(typeResult);
     };
   }
 
 // 결과값 매칭
-  var personalityMatch = function(typeResult) {
+  const personalityMatch = function(typeResult) {
     // document.getElementById('result').removeClass('hidden');
     $('#result').removeClass('hidden');
     $('#' + typeResult).removeClass('hidden');

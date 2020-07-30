@@ -345,7 +345,7 @@ const Quiz = function() {
             option5: { type: "extraversion",      point: 2 }
           },
            {
-            question: "It is essential for you to try things with your own hands.",
+            question: "어떤 일이던 내 손으로 직접 해야합니다.",
             option1: { type: "intuition",       point: 2 },
             option2: { type: "intuition",       point: 1 },
             option3: { type: "none",          point: 0 },
