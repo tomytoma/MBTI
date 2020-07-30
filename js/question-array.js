@@ -1,9 +1,9 @@
 const Quiz = function() {
-    let tempobj = {};
+    let mbtiListObject = {};
 
-    tempobj.currentQuestion = 0,
+    mbtiListObject.currentQuestion = 0,
 
-    tempobj.totalScore = {
+    mbtiListObject.totalScore = {
         extraversion: 0,
         introversion: 0,
         sensing: 0,
@@ -15,7 +15,7 @@ const Quiz = function() {
         none: 0
     },
 
-    tempobj.questions = [
+    mbtiListObject.questions = [
         {
             question: "나는 약속에 거의 늦지 않습니다.",
             option1: { type: "judging",  point: 2 },
@@ -506,18 +506,18 @@ const Quiz = function() {
           }
         ],
 
-        tempobj.questionPercentage = function(){
+        mbtiListObject.questionPercentage = function(){
             return (this.currentQuestion - 1) / 59 * 100;
         };
           
-        tempobj.nextQuestion = function(){
+        mbtiListObject.nextQuestion = function(){
             return this.questions[this.currentQuestion++];
         };
           
-        tempobj.answer = function(){
+        mbtiListObject.answer = function(){
             console.log('answer!');
         };
 
         // 반환
-        return tempobj;
+        return mbtiListObject;
 }

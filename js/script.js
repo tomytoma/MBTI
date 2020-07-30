@@ -122,11 +122,11 @@ $(function () {
 // 콘솔테스트 하면서체크해볼 것
 // 
       console.log( quiz.totalScore )
-      const h1Input = ""
+      let h1Input = ""
       h1Input += "<h1>" + "재능교육 MBTI 결과 " + "<br>" + h1[ 0 ] + h1[ 1 ] + h1[ 2 ] + h1[ 3 ] + "</h1><br>"
       $( "h1" ).empty().append( h1Input )
 
-      const typeResult = ""
+      let typeResult = ""
       typeResult += lettersResult[ 0 ] + lettersResult[ 1 ] + lettersResult[ 2 ] + lettersResult[ 3 ]
       personalityMatch(typeResult);
     };
