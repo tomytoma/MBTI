@@ -1,7 +1,5 @@
-//script의 변수 var를 let 또는 const로 변경할 것
-//변수명을 unique하게 작성토록 할 것
 //jquery 객체로 테스트 >> 2020.07.17
-//jquery 객체를 Vanilla JS로 변경 진행 중 >> 2020.07.27-29
+//jquery 객체를 Vanilla JS로 변경 진행 중 >> 2020.07.27-
 
 $(function () {
 
