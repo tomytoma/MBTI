@@ -1,5 +1,5 @@
 //jquery 객체로 테스트 >> 2020.07.17
-//jquery 객체를 Vanilla JS로 변경 진행 중 >> 2020.07.27-
+//jquery 객체를 Vanilla JS로 변경 진행 중 >> 2020.07.27-29
 
 $(function () {
 
